@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?><_ROOT_ EMVERSION="14.1" ORIENTATION="HORIZONTAL">
+<Workspace>
+<NODES>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Boost" ID="Boost" X="954" Y="619" DESCRIPTION="Gradient Boosting" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Boost">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.BOOST.SOURCE" ToolType="MODEL" Iterations="50" CategoricalBins="30" IntervalBins="100" TrainProportion="60" Seed="12345" Shrinkage="0.1" LeafFraction="0.1" SplitSize="." MinCatSize="5" MaxBranch="2" MaxDepth="2" NSurrs="0" Missing="USEINSEARCH" Huber="NO" ReUseVar="1" AssessMeasure="PROFIT" NodeSize="20000" Exhaustive="5000" VarSelection="Y" Performance="DISK" SubSeries="BEST" IterationNum="1" ObsImportance="N" NumSingleImp="5" CreateHStat="N" ForceRun="N" RunAction="Train" Component="Boost" Precision="0" Measure="PROFIT" NumPairImp="0" DataNeeded="Y">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Code" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="DY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Date" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="High" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IDR" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_AUD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BSESN" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BZ" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_CNY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_FTSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HKD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HSI" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_IXIC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_JPY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KLSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_LB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N100" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N225" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_PL" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SGD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SS" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_THB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_USD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Low" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="MarketCap" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Name" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Open" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="PE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Polarity" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Posts" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Quote" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="ROE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="_dataobs_" AttributeName="USE" AttributeValue="N"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<ChngClass>
+<DecData Table="EMWS2.Boost_ChngClass_DD">
+<Data>
+<Obs CHNGCLASS="POSITIVE" COUNT="24" DATAPRIOR="0.5581395349" TRAINPRIOR="0.5581395349" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CHNGCLASS="NEGATIVE" COUNT="19" DATAPRIOR="0.4418604651" TRAINPRIOR="0.4418604651" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="ChngClass" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="POSITIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="NEGATIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS2.Boost_ChngClass_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="ChngClass" LABEL="ChngClass" LEVEL="NOMINAL" EVENT="POSITIVE" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="POSITIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="NEGATIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassPositive" LABEL="Predicted: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassPositive" LABEL="Residual: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassNegative" LABEL="Predicted: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassNegative" LABEL="Residual: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_ChngClass" LABEL="From: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_ChngClass" LABEL="Into: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</ChngClass>
+</EmTargetAttributes>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EMCODETOOL.CLASS" COMPONENT="SASCode" ID="EMCODE" X="666" Y="367" DESCRIPTION="FILTER Stock=IWCITY and Impute" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="EMCODE">
+<PROPERTIES UsePriors="Y" ToolType="UTILITY" DataNeeded="N" PublishCode="PUBLISH" ScoreCodeFormat="DATASTEP" MetaAdvisor="BASIC" ForceRun="N" RunAction="Train" Component="SASCode">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Code" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="DY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Date" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Name" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="PE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Quote" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="ROE" AttributeName="USE" AttributeValue="N"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data><![CDATA[
+DATA &amp;EM_EXPORT_TRAIN;
+   SET &amp;EM_IMPORT_DATA;
+ 	IF (Quote = 'IWCITY') AND not missing(IDR);
+	IF missing(Polarity) then Polarity=0;
+   IF missing(Posts) then Posts=0;
+run;
+]]>
+</Data>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="EMSave" ID="EMSave" X="810" Y="310" DESCRIPTION="Save IWCITY Data" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="EMSave">
+<PROPERTIES Location="CATALOG" Catalog="Sashelp.Emutil.Savext.Source" Type="CSV" Replace="Y" AllObs="Y" OutObs="1000" AllRoles="Y" Train="Y" Validate="Y" Test="Y" Score="Y" Transaction="Y" ForceRun="N" RunAction="Train" Component="EMSave" Lib="" DirectorySelector="C:\Users\vmann\OneDrive\Study\UM\WQD7005\Project\SAS Exported Data" Name="">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids" X="87" Y="323" DESCRIPTION="STOCKPRICE2" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="stockprice1" Scope="LOCAL" Role="RAW" Library="WQD7005" Table="STOCKPRICE2" NCols="22" NObs="54935" NBytes="3675292672" Segment="" DataSourceRole="RAW" OutputType="DATA" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="stockprice1" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="vmann" DsCreateDate="1872116894.5" DsModifiedBy="vmann" DsModifyDate="1872116894.6" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="AskPrice" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="AskVolume" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="BidPrice" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="BidVolume" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="Chg" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="ChgPct" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="ChngClass" AttributeName="ROLE" AttributeValue="TARGET"/>
+<DELTA Variable="LastPrice" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="Sector" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="UpdateDate" AttributeName="DROP" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<LastPrice>
+<DecData Table="EMWS2.Ids_LastPrice_DD">
+<Data>
+<Obs LASTPRICE="0"/>
+<Obs LASTPRICE="149.5"/>
+<Obs LASTPRICE="74.75"/>
+</Data>
+<Metadata>
+<Variable NAME="LastPrice" LABEL="LastPrice" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS2.Ids_LastPrice_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" FORMAT="" LEVEL="PROFIT" TYPE="" COST="" USE="N" MIN="." MEAN="." MAX="."/>
+<Obs _TYPE_="TARGET" VARIABLE="LastPrice" LABEL="LastPrice" FORMAT="" LEVEL="INTERVAL" TYPE="N" COST="" USE="" MIN="0" MEAN="2.1669461622" MAX="149.5"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_LastPrice" LABEL="Predicted: LastPrice" FORMAT="" LEVEL="" TYPE="N" COST="" USE="" MIN="." MEAN="." MAX="."/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_LastPrice" LABEL="Residual: LastPrice" FORMAT="" LEVEL="" TYPE="N" COST="" USE="" MIN="." MEAN="." MAX="."/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="MIN" LABEL="Minimum" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="MEAN" LABEL="Mean" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="MAX" LABEL="Maximum" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecMeta>
+</LastPrice>
+<ChngClass>
+<DecData Table="EMWS2.Ids_ChngClass_DD">
+<Data>
+<Obs CHNGCLASS="POSITIVE" COUNT="15709" DATAPRIOR="0.28595613" TRAINPRIOR="0.28595613" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CHNGCLASS="NEGATIVE" COUNT="39226" DATAPRIOR="0.71404387" TRAINPRIOR="0.71404387" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="ChngClass" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="POSITIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="NEGATIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS2.Ids_ChngClass_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="ChngClass" LABEL="ChngClass" LEVEL="NOMINAL" EVENT="POSITIVE" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="POSITIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="NEGATIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassPositive" LABEL="Predicted: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassPositive" LABEL="Residual: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassNegative" LABEL="Predicted: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassNegative" LABEL="Residual: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_ChngClass" LABEL="From: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_ChngClass" LABEL="Into: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</ChngClass>
+</EmTargetAttributes>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids2" X="89" Y="417" DESCRIPTION="MAJORFOREX" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="majorforex" Scope="LOCAL" Role="RAW" Library="WQD7005" Table="MAJORFOREX" NCols="12" NObs="54" NBytes="66560" Segment="" DataSourceRole="RAW" OutputType="DATA" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="majorforex" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="vmann" DsCreateDate="1869868955.3" DsModifiedBy="vmann" DsModifyDate="1869868955.3" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="_LABEL_" AttributeName="DROP" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids3" X="88" Y="476" DESCRIPTION="MAJORINDICES" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="majorindices" Scope="LOCAL" Role="RAW" Library="WQD7005" Table="MAJORINDICES" NCols="10" NObs="33" NBytes="66560" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="majorindices" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="vmann" DsCreateDate="1869869042" DsModifiedBy="vmann" DsModifyDate="1869869042.1" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="_LABEL_" AttributeName="DROP" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids4" X="89" Y="534" DESCRIPTION="COMMODITIES" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="commodities" Scope="LOCAL" Role="RAW" Library="WQD7005" Table="COMMODITIES" NCols="10" NObs="40" NBytes="66560" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="commodities" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="vmann" DsCreateDate="1869875137.7" DsModifiedBy="vmann" DsModifyDate="1869875137.7" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="_LABEL_" AttributeName="DROP" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids5" X="87" Y="266" DESCRIPTION="FORUMPOSTS" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="forumposts" Scope="LOCAL" Role="RAW" Library="WQD7005" Table="FORUMPOSTS" NCols="4" NObs="91706" NBytes="1527620608" Segment="" DataSourceRole="RAW" OutputType="DATA" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="forumposts" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="vmann" DsCreateDate="1871767725.7" DsModifiedBy="vmann" DsModifyDate="1871767725.8" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Quote" AttributeName="ROLE" AttributeValue="INPUT"/>
+<DELTA Variable="UpdateDate" AttributeName="DROP" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids6" X="86" Y="210" DESCRIPTION="BUSINESSNEWS_POLARITY" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="businessnewspolarity" Scope="LOCAL" Role="RAW" Library="WQD7005" Table="BUSINESSNEWS_POLARITY" NCols="5" NObs="2952" NBytes="721920" Segment="" DataSourceRole="RAW" OutputType="DATA" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="N" DsId="businessnewspolarity" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="vmann" DsCreateDate="1871770857" DsModifiedBy="vmann" DsModifyDate="1871770857.1" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Title" AttributeName="DROP" AttributeValue="Y"/>
+<DELTA Variable="Translated_Title" AttributeName="DROP" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMDFY.EMIMPUTE.CLASS" COMPONENT="Impute" ID="Impt" X="377" Y="476" DESCRIPTION="Impute" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Impt">
+<PROPERTIES MethodInterval="MEAN" MethodClass="CONSTANT" MethodTargetInterval="NONE" MethodTargetClass="NONE" ABWTuning="9" AHUBERTuning="1.5" AWAVETuning="6.2831853072" SpacingProportion="90" DefaultChar="Missing" DefaultNum="." RandomSeed="12345" Normalize="N" ImputeNoMissing="N" MaxPctMissing="50" ValidateTestMissing="N" DistributionMissing="N" LeafSize="5" Maxbranch="2" Maxdepth="6" MinCatSize="5" Nrules="5" Nsurrs="2" Splitsize="." Indicator="NONE" IndicatorRole="REJECTED" ReplaceVariable="N" HideVariable="Y" IndicatorSource="IMPUTED" ForceRun="N" RunAction="Train" Component="Impute">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp" X="1362" Y="415" DESCRIPTION="Model Comparison" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="MdlComp">
+<PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6" ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01" AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" SelectionTable="TRAIN" SelectionCriteria="DEFAULT" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N" TargetName="ChngClass" ModelId="Boost" ModelDescription="Gradient Boosting" ModelCriteria="Valid: Misclassification Rate" ForceRun="N" RunAction="Train" Component="ModelCompare" StatisticUsed="_VMISC_" TargetLabel="ChngClass">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMUTIL.EMMERGE.CLASS" COMPONENT="Merge" ID="Merge" X="234" Y="476" DESCRIPTION="Merge" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="Merge">
+<PROPERTIES MergeType="MATCH" OverwriteVariables="Y" OverwritePredicted="N" OverwriteResidual="N" OverwriteClassification="N" OverwriteAssess="N" OverwriteSegment="N" ForceRun="N" RunAction="Train" Component="Merge">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Date" AttributeName="MERGEROLE" AttributeValue="BY"/>
+<DELTA Variable="Date" AttributeName="OVERWRITE" AttributeValue="Y"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<BYORDER Type="DATA">
+<Data>
+<Obs NAME="Date" ROLE="TIMEID" LEVEL="INTERVAL" TYPE="N" LABEL="Date" _ORDER_="1"/>
+</Data>
+<Metadata>
+<Variable NAME="NAME" LABEL="Variable Name" LENGTH="64" FORMAT="" TYPE="C"/>
+<Variable NAME="ROLE" LABEL="Role" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="200" FORMAT="" TYPE="C"/>
+<Variable NAME="_ORDER_" LABEL="Order" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</BYORDER>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMUTIL.EMMERGE.CLASS" COMPONENT="Merge" ID="Merge2" X="522" Y="367" DESCRIPTION="Merge all DATA" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="Merge">
+<PROPERTIES MergeType="MATCH" OverwriteVariables="Y" OverwritePredicted="N" OverwriteResidual="N" OverwriteClassification="N" OverwriteAssess="N" OverwriteSegment="N" ForceRun="N" RunAction="Train" Component="Merge" LastRunMessage="Could not create a new MPCONNECT session. Please check the SAS Command property of this project's server definition.">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Date" AttributeName="MERGEROLE" AttributeValue="BY"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<BYORDER Type="DATA">
+<Data>
+<Obs NAME="Date" ROLE="TIMEID" LEVEL="INTERVAL" TYPE="N" LABEL="" _ORDER_="1"/>
+</Data>
+<Metadata>
+<Variable NAME="NAME" LABEL="Variable Name" LENGTH="64" FORMAT="" TYPE="C"/>
+<Variable NAME="ROLE" LABEL="Role" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="200" FORMAT="" TYPE="C"/>
+<Variable NAME="_ORDER_" LABEL="Order" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</BYORDER>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMUTIL.EMMERGE.CLASS" COMPONENT="Merge" ID="Merge3" X="232" Y="295" DESCRIPTION="Merge Forum &amp; StockPrice" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="Merge">
+<PROPERTIES MergeType="MATCH" OverwriteVariables="Y" OverwritePredicted="N" OverwriteResidual="N" OverwriteClassification="N" OverwriteAssess="N" OverwriteSegment="N" ForceRun="N" RunAction="Train" Component="Merge">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Date" AttributeName="MERGEROLE" AttributeValue="BY"/>
+<DELTA Variable="Quote" AttributeName="MERGEROLE" AttributeValue="BY"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<BYORDER Type="DATA">
+<Data>
+<Obs NAME="Date" ROLE="TIMEID" LEVEL="INTERVAL" TYPE="N" LABEL="Date" _ORDER_="1"/>
+<Obs NAME="Quote" ROLE="INPUT" LEVEL="NOMINAL" TYPE="C" LABEL="Quote" _ORDER_="2"/>
+</Data>
+<Metadata>
+<Variable NAME="NAME" LABEL="Variable Name" LENGTH="64" FORMAT="" TYPE="C"/>
+<Variable NAME="ROLE" LABEL="Role" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="200" FORMAT="" TYPE="C"/>
+<Variable NAME="_ORDER_" LABEL="Order" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</BYORDER>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMUTIL.EMMERGE.CLASS" COMPONENT="Merge" ID="Merge4" X="377" Y="249" DESCRIPTION="Merge with Social Data" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="UTILITY" TOOLPREFIX="Merge">
+<PROPERTIES MergeType="MATCH" OverwriteVariables="Y" OverwritePredicted="N" OverwriteResidual="N" OverwriteClassification="N" OverwriteAssess="N" OverwriteSegment="N" ForceRun="N" RunAction="Train" Component="Merge">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Code" AttributeName="MERGEROLE" AttributeValue="BY"/>
+<DELTA Variable="Date" AttributeName="MERGEROLE" AttributeValue="BY"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<BYORDER Type="DATA">
+<Data>
+<Obs NAME="Code" ROLE="INPUT" LEVEL="NOMINAL" TYPE="C" LABEL="" _ORDER_="1"/>
+<Obs NAME="Date" ROLE="TIMEID" LEVEL="INTERVAL" TYPE="N" LABEL="" _ORDER_="2"/>
+</Data>
+<Metadata>
+<Variable NAME="NAME" LABEL="Variable Name" LENGTH="64" FORMAT="" TYPE="C"/>
+<Variable NAME="ROLE" LABEL="Role" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="200" FORMAT="" TYPE="C"/>
+<Variable NAME="_ORDER_" LABEL="Order" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</BYORDER>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMODL.NEURAL.CLASS" COMPONENT="NeuralNetwork" ID="Neural" X="954" Y="529" DESCRIPTION="Neural Network" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Neural">
+<PROPERTIES UseEstimates="N" NetworkArchitecture="MLP" DirectConnection="N" Hidden="6" Prelim="Y" PreliminaryRuns="5" PrelimMaxiter="10" PrelimMaxTime="1 HOUR" Maxiter="50" Maxtime="4 HOURS" TrainingTechnique="DEFAULT" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTime="1" GConvValue="1E-6" GConvTime="1" ModelSelectionCriterion="PROFIT/LOSS" SuppressOutput="N" Residuals="Y" Standardizations="N" HiddenUnits="N" TrainCode="" PrelimOutest="" Outest="" Outfit="" InitialDs="" CodefileRes="" CodefileNoRes="" AddHidden="Y" HiddenCombFunction="DEFAULT" HiddenActivation="DEFAULT" HiddenBias="Y" TargetCombFunction="DEFAULT" TargetActivation="DEFAULT" TargetError="DEFAULT" TargetBias="Y" InitialSeed="12345" RandDist="NORMAL" RandScale="0.1" RandLoc="0" InputStandardization="STD" WeightDecay="0" Accelerate="1.2" Decelerate="0.5" Learn="0.1" MaxLearn="50" MinLearn="0.00001" Momentum="0" MaxMomentum="1.75" Tilt="0" ForceRun="N" RunAction="Train" Component="NeuralNetwork">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Code" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="DY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="High" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_AUD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BSESN" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BZ" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_CNY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_FTSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HKD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HSI" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_IXIC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_JPY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KLSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_LB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N100" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N225" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_PL" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SGD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SS" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_THB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_USD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Low" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="MarketCap" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Open" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="PE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Polarity" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Posts" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="ROE" AttributeName="USE" AttributeValue="N"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<ChngClass>
+<DecData Table="EMWS2.Neural_ChngClass_DD">
+<Data>
+<Obs CHNGCLASS="POSITIVE" COUNT="24" DATAPRIOR="0.5490196078" TRAINPRIOR="0.5581395349" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CHNGCLASS="NEGATIVE" COUNT="19" DATAPRIOR="0.4509803922" TRAINPRIOR="0.4418604651" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="ChngClass" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="POSITIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="NEGATIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS2.Neural_ChngClass_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="ChngClass" LABEL="ChngClass" LEVEL="NOMINAL" EVENT="POSITIVE" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="POSITIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="NEGATIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassPositive" LABEL="Predicted: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassPositive" LABEL="Residual: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassNegative" LABEL="Predicted: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassNegative" LABEL="Residual: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_ChngClass" LABEL="From: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_ChngClass" LABEL="Into: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</ChngClass>
+</EmTargetAttributes>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.EMDPART.CLASS" COMPONENT="Partition" ID="Part" X="809" Y="366" DESCRIPTION="Data Partition" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Part">
+<PROPERTIES Method="DEFAULT" TrainPct="60" ValidatePct="20" TestPct="20" RandomSeed="12345" OutputType="DATA" IntervalDistribution="N" ClassDistribution="Y" ForceRun="N" RunAction="Train" Component="Partition">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg" X="954" Y="410" DESCRIPTION="Regression" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
+<PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N" Error="LOGISTIC" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="DEVIATION" MinResourceUse="N" ModelSelection="NONE" SelectionCriterion="DEFAULT" SelectionDefault="N" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="10" StepOutput="N" OptimizationTechnique="CONGRA" ModelDefaults="N" MaxIterations="0" MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="N" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="1E-5" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="Y" Covout="Y" CovB="Y" CorB="Y" Simple="Y" SuppressOutput="N" Details="Y" PrintDesignMatrix="Y" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Code" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="DY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="High" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_AUD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BSESN" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BZ" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_CNY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_FTSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HKD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HSI" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_IXIC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_JPY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KLSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_LB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N100" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N225" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_PL" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SGD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SS" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_THB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_USD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Low" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="MarketCap" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Open" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="PE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Polarity" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Posts" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="ROE" AttributeName="USE" AttributeValue="N"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<ChngClass>
+<DecData Table="EMWS2.Reg_ChngClass_DD">
+<Data>
+<Obs CHNGCLASS="POSITIVE" COUNT="24" DATAPRIOR="0.5517241379" TRAINPRIOR="0.5581395349" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CHNGCLASS="NEGATIVE" COUNT="19" DATAPRIOR="0.4482758621" TRAINPRIOR="0.4418604651" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="ChngClass" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="POSITIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="NEGATIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS2.Reg_ChngClass_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="ChngClass" LABEL="ChngClass" LEVEL="NOMINAL" EVENT="POSITIVE" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="POSITIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="NEGATIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassPositive" LABEL="Predicted: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassPositive" LABEL="Residual: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassNegative" LABEL="Predicted: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassNegative" LABEL="Residual: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_ChngClass" LABEL="From: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_ChngClass" LABEL="Into: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</ChngClass>
+</EmTargetAttributes>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DecisionTree" ID="Tree" X="955" Y="280" DESCRIPTION="Decision Tree" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Tree">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.TREE.SOURCE" ToolType="MODEL" TrainMode="BATCH" ImportModel="N" Freeze="N" UseMultipleTarget="N" Precision="4" IntervalCriterion="PROBF" NominalCriterion="PROBCHISQ" OrdinalCriterion="ENTROPY" SigLevel="0.2" Splitsize="." LeafSize="2" MinCatSize="5" Maxbranch="2" Maxdepth="10" Nrules="5" Nsurrs="0" MissingValue="USEINSEARCH" UseVarOnce="N" SplitPrecision="4" Subtree="ASSESSMENT" NSubtree="1" AssessMeasure="PROFIT/LOSS" AssessPercentage="0.25" NodeSample="20000" Exhaustive="5000" Kass="Y" KassApply="BEFORE" Depth="Y" Inputs="N" NumInputs="1" VarSelection="Y" Leafid="Y" NodeRole="SEGMENT" Performance="DISK" CV="Y" CVNIter="10" CVRepeat="1" CVSeed="12345" ObsImportance="N" NumSingleImp="5" UseDecision="N" UsePriors="N" ClassColorBy="PERCENTCORRECT" IntColorBy="AVG" ShowNodeId="Y" ShowValid="Y" Pred="N" Target="ALL" Count="Y" ProfitLoss="NONE" PercentCorrect="N" AVG="Y" RASE="N" CreateSample="DEFAULT" SampleMethod="RANDOM" SampleSize="10000" SampleSeed="12345" ForceRun="N" RunAction="Train" Component="DecisionTree" Criterion="DEFAULT" Dummy="N" Predict="Y" ImportedTreeData="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="Code" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="DY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Date" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="High" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IDR" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_AUD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BSESN" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_BZ" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_CNY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_FTSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HKD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_HSI" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_IXIC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_JPY" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KC" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_KLSE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_LB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N100" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_N225" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_PL" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SGD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_SS" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_THB" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="IMP_USD" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Low" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="MarketCap" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Name" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Open" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="PE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Polarity" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Posts" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="Quote" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="ROE" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="_dataobs_" AttributeName="USE" AttributeValue="N"/>
+</EmVariableAttributes>
+<EmTargetAttributes>
+<ChngClass>
+<DecData Table="EMWS2.Tree_ChngClass_DD">
+<Data>
+<Obs CHNGCLASS="POSITIVE" COUNT="24" DATAPRIOR="0.5466666667" TRAINPRIOR="0.5581395349" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs CHNGCLASS="NEGATIVE" COUNT="19" DATAPRIOR="0.4533333333" TRAINPRIOR="0.4418604651" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+</Data>
+<Metadata>
+<Variable NAME="ChngClass" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+<Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION1" LABEL="POSITIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="DECISION2" LABEL="NEGATIVE" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</DecData>
+<DecMeta Table="EMWS2.Tree_ChngClass_DM">
+<Data>
+<Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
+<Obs _TYPE_="TARGET" VARIABLE="ChngClass" LABEL="ChngClass" LEVEL="NOMINAL" EVENT="POSITIVE" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="POSITIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="NEGATIVE" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
+<Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassPositive" LABEL="Predicted: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassPositive" LABEL="Residual: ChngClass=Positive" LEVEL="POSITIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_ChngClassNegative" LABEL="Predicted: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_ChngClassNegative" LABEL="Residual: ChngClass=Negative" LEVEL="NEGATIVE" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_ChngClass" LABEL="From: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_ChngClass" LABEL="Into: ChngClass" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+</Data>
+<Metadata>
+<Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+<Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+</Metadata>
+</DecMeta>
+</ChngClass>
+</EmTargetAttributes>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+</NODES>
+<CONNECTIONS>
+<CONNECTION FROM="Ids4" TO="Merge"/>
+<CONNECTION FROM="Merge" TO="Impt"/>
+<CONNECTION FROM="Impt" TO="Merge2"/>
+<CONNECTION FROM="Merge2" TO="EMCODE"/>
+<CONNECTION FROM="EMCODE" TO="EMSave"/>
+<CONNECTION FROM="EMCODE" TO="Part"/>
+<CONNECTION FROM="Part" TO="Tree"/>
+<CONNECTION FROM="Part" TO="Neural"/>
+<CONNECTION FROM="Neural" TO="MdlComp"/>
+<CONNECTION FROM="Tree" TO="MdlComp"/>
+<CONNECTION FROM="Ids3" TO="Merge"/>
+<CONNECTION FROM="Ids2" TO="Merge"/>
+<CONNECTION FROM="Ids" TO="Merge3"/>
+<CONNECTION FROM="Merge3" TO="Merge4"/>
+<CONNECTION FROM="Merge4" TO="Merge2"/>
+<CONNECTION FROM="Ids5" TO="Merge3"/>
+<CONNECTION FROM="Ids6" TO="Merge4"/>
+<CONNECTION FROM="Reg" TO="MdlComp"/>
+<CONNECTION FROM="Part" TO="Reg"/>
+<CONNECTION FROM="Part" TO="Boost"/>
+<CONNECTION FROM="Boost" TO="MdlComp"/>
+</CONNECTIONS>
+<NOTES>
+<DATA><![CDATA[
+
+]]>
+</DATA>
+</NOTES>
+</Workspace>
+</_ROOT_>
